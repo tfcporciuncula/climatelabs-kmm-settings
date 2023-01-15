@@ -14,12 +14,14 @@ kotlin {
   ).forEach {
     it.binaries.framework {
       baseName = "shared"
+      export(project(":preferences"))
     }
   }
 
   sourceSets {
     val commonMain by getting {
       dependencies {
+        api(project(":preferences"))
         implementation("me.tatarka.inject:kotlin-inject-runtime:0.5.1")
       }
     }
