@@ -16,3 +16,4 @@ dependencyResolutionManagement {
 rootProject.name = "climatelabs-kmm-settings"
 include(":androidApp")
 include(":shared")
+include(":preferences")
